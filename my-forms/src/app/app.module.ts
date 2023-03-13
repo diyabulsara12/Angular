@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './usercomponent/user/user.component';
+import { NgforComponent } from './structuraldirective/ngfor/ngfor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    NgforComponent
   ],
   imports: [
     BrowserModule,

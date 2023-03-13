@@ -1,0 +1,72 @@
+<table>
+    <thead>
+<tr ngFor="let header of headers">
+    <th>{{headers[0]}}</th>
+    <th>{{headers[1]}}</th>
+    <th>{{headers[2]}}</th>
+    <th>{{headers[3]}}</th>
+    <th>{{headers[4]}}</th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let mypro of person; index as i">
+        <td>#{{i}}</td>
+        <td>{{mypro.id}}</td>
+        <td>{{mypro.name}}</td>
+        <td>{{mypro.email}}</td>
+        <td>{{mypro.phno}}</td>
+        <td *ngIf="mypro.Valid " ><button>Add</button>
+        </td>
+    </tr>
+</tbody>
+</table>
+<div  (change)="getWeekdays($event)">
+<label for="">Monday</label>
+ <input type="radio"  name="weekday" value="Monday">
+ <label for="">Tuesday</label>
+ <input type="radio" name="weekday" value="Tuesday"  >
+ <label for="">Wednesday</label>
+ <input type="radio" name="weekday" value="Wednesday" >
+ <label for="">Thursday</label>
+ <input type="radio" name="weekday" value="Thursday" >
+ <label for="">Friday</label> 
+ <input type="radio" name="weekday" value="Friday" >
+ <label for="">Saturday</label>
+ <input type="radio" name="weekday" value="Saturday" >
+ <label for="">Sunday</label> 
+ <input type="radio" name="weekday" value="Sunday"><br><br>
+</div>
+
+<div [ngSwitch]=" selectedDays " >
+    <span *ngSwitchDefault>Please select a day</span>
+ <p *ngSwitchCase="'Monday'">Today is Monday</p><br>
+ <p  *ngSwitchCase="'Tuesday'">Today is Tuesday</p><br>
+ <p  *ngSwitchCase="'Wednesday'">Today is Wednesday</p><br>
+ <span  *ngSwitchCase="'Thursday'">Today is Thursday</span><br>
+ <span  *ngSwitchCase="'Friday'">Today is fridayday</span><br>
+ <span  *ngSwitchCase="'Saturday'">Today is Saturday</span><br>
+ <span  *ngSwitchCase="'Sunday'">Today is sunday</span>
+</div>
+
+<p [ngStyle]="{'font-size':'20px','color':'red'}">Attribute Directive</p>
+<p [ngStyle]="myStyle">ngStyle</p>
+<button (click)="getStyle()">Click</button>
+
+
+
+<div [ngStyle]="{'color':true ?'green' : 'red'}"> Hello</div>
+
+<div [ngClass]="myClasses">Ng Class</div>
+<button (click)="changeShape()">Change shape</button>
+
+
+
+
+
+
+
+
+
+ 
+
+
