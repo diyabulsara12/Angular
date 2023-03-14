@@ -1,0 +1,26 @@
+
+<label for="search">Search for empoloyee: </label>
+<input type="text"  id="search" placeholder="Search Here "
+[(ngModel)]="namesearch">
+<table>
+    <thead>
+<tr ngFor="let header of headers">
+    <th>{{headers[0]}}</th>
+    <th>{{headers[1]}}</th>
+    <th>{{headers[2]}}</th>
+    <th>{{headers[3]}}</th>
+    <th>{{headers[4]}}</th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let mypro of person | filter:namesearch">
+        
+        <td>{{mypro.id}}</td>
+        <td>{{mypro.name}}</td>
+        <td>{{mypro.email}}</td>
+        <td>{{mypro.phno}}</td>
+        <td *ngIf="mypro.Valid " ><button>Add</button>
+        </td>
+    </tr>
+</tbody>
+</table>

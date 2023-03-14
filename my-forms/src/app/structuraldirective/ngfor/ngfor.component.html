@@ -1,3 +1,6 @@
+<label for="search">Search for empoloyee: </label>
+<input type="text"  id="search" placeholder="Search Here "
+[(ngModel)]="namesearch">
 <table>
     <thead>
 <tr ngFor="let header of headers">
@@ -9,8 +12,8 @@
 </tr>
 </thead>
 <tbody>
-    <tr *ngFor="let mypro of person; index as i">
-        <td>#{{i}}</td>
+    <tr *ngFor="let mypro of person | filter:namesearch">
+        
         <td>{{mypro.id}}</td>
         <td>{{mypro.name}}</td>
         <td>{{mypro.email}}</td>
@@ -49,8 +52,8 @@
 </div>
 
 <p [ngStyle]="{'font-size':'20px','color':'red'}">Attribute Directive</p>
-<p [ngStyle]="myStyle">ngStyle</p>
-<button (click)="getStyle()">Click</button>
+<p [ngStyle]="changestyle ? getStyle() : getStyle2() ">ngStyle</p>
+<button (click)="changestyle = !changestyle">Click</button>
 
 
 
@@ -58,6 +61,10 @@
 
 <div [ngClass]="myClasses">Ng Class</div>
 <button (click)="changeShape()">Change shape</button>
+<p [ngClass]="MyClass">Hello</p>
+
+
+<span>Selected Colors</span>
 
 
 
