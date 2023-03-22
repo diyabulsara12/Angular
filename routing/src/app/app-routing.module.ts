@@ -8,6 +8,8 @@ const routes: Routes = [
   {path:"" , redirectTo:'product-list', pathMatch:'full'},
   {path:'product-list' , component:ProductlistComponent,canActivate:[ AuthService]},
   {path:'product-detail/:id' , component:ProductdetailComponent},
+  {path:"product" , loadChildren:() => import('./product/product.module').then(Response => Response.ProductModule)},
+
   {path:"employee" , loadChildren:() => import('./employee/employee.module').then(Response => Response.EmployeeModule)}
 ];
 

@@ -1,0 +1,30 @@
+
+<html>
+  <head>
+  </head>
+    <body>
+      <div class="form-container">
+        <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <label class="form-label" for="username" >Username</label>
+        <input class="text-field" type="text" name="uname"placeholder="enter username"  ngModel={{data.uname}} required  #username="ngModel"> <br>
+        <span *ngIf="!username.valid && username.touched">enter valid username</span><br>
+        <label class="form-label"for="email">email</label>
+        <input class="text-field" type="text" name="email" placeholder="enter email" ngModel #email="ngModel" required email ><br>
+        <span *ngIf="!email.valid && email.touched">Please enter correct email</span><br>
+        <label class="form-label" for="contry">select country</label>
+        <select class="text-field" name="contry" ngModel required>
+          <option value="India">India</option>
+          <option value="Usa">Usa</option>
+          <option value="Canada">Canada</option>
+          <option value="Germany">Germany</option>
+          <option value="Uk">Uk</option>
+        </select><br>
+        <input class="submit-btn"type="submit" value="submit" [disabled]="!myForm.valid">
+        </form>
+       
+        </div>
+    </body>
+  
+</html>
+
+<router-outlet></router-outlet>

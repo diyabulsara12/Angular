@@ -7,6 +7,7 @@ import { CanActivate } from '@angular/router';
 export class AuthService implements CanActivate   {
   canActivate()
   {
+
     return true;
   }
 

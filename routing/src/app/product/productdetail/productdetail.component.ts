@@ -9,12 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductdetailComponent implements OnInit {
 
   constructor( private route:ActivatedRoute) { }
-  userId:any;
-
+  productId:any;
+ 
   ngOnInit(): void {
 
-    this.userId=this.route.snapshot.paramMap.get("id");
-    
+    this.productId=this.route.snapshot.paramMap.get("id");
+   
   }
 
   
