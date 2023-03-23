@@ -6,7 +6,7 @@
       <div class="form-container">
         <form (ngSubmit)="onSubmit()" #myForm="ngForm">
         <label class="form-label" for="username" >Username</label>
-        <input class="text-field" type="text" name="uname"placeholder="enter username"  ngModel={{data.uname}} required  #username="ngModel"> <br>
+        <input class="text-field" type="text" name="uname"placeholder="enter username"  ngModel={{data.uname}} required  #username="ngModel" pattern=".*[^ ].*" > <br>
         <span *ngIf="!username.valid && username.touched">enter valid username</span><br>
         <label class="form-label"for="email">email</label>
         <input class="text-field" type="text" name="email" placeholder="enter email" ngModel #email="ngModel" required email ><br>
@@ -28,3 +28,4 @@
 </html>
 
 <router-outlet></router-outlet>
+ 
