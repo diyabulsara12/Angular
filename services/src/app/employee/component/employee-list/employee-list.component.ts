@@ -11,19 +11,21 @@ export class EmployeeListComponent implements OnInit {
    data:any;
    thead:any=["id",'name',"age","dept","add","email",'Action'];
   constructor(private employeeeservice:EmployeeService) { 
-   this.data=this.employeeeservice.empdata;
+    // this.data=this.employeeeservice.empdata;
  
    
   }
 
   ngOnInit(): void {
-    console.log(this.data);
+    
+    this.data=this.employeeeservice.getData();
   }
 
 
   delete(id:any): void{
-    this.employeeeservice.myDelete(Number(id)-1);
-    console.log(Number(id)+1);
+    this.employeeeservice.myDelete(id);
+    this.data=this.employeeeservice.getData();
+ 
     
   }
 

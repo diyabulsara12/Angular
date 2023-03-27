@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { EmployeeService } from '../../employee.service';
 
@@ -6,7 +6,8 @@ import { EmployeeService } from '../../employee.service';
   selector: 'app-employee-add',
   templateUrl: './employee-add.component.html',
   styleUrls: ['./employee-add.component.css'],
-  viewProviders:[EmployeeService]
+  viewProviders:[EmployeeService],
+  changeDetection:ChangeDetectionStrategy.OnPush
   
 })
 export class EmployeeAddComponent implements OnInit {
@@ -30,7 +31,8 @@ export class EmployeeAddComponent implements OnInit {
   onSubmit(){
     console.log(this.myReactiaveform.value);
   
-    localStorage.setItem("localdata", JSON.stringify(this.myReactiaveform.value));
+    console.log(localStorage.setItem("localdata", JSON.stringify(this.myReactiaveform.value)));
+
     
   }
 
