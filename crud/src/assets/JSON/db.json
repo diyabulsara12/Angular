@@ -1,19 +1,112 @@
 {
-  "posts": [
+  "product": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "productname": "laptop",
+      "price": 10000,
+      "avail": "yes"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "productname": "tablet",
+      "price": 5000,
+      "avail": "no"
+    },
+    {
+      "productname": "smart-phone",
+      "price": 7000,
+      "avail": "yes",
+      "id": 3
+    },
+    {
+      "productname": "fridge",
+      "price": 80000,
+      "avail": "no",
+      "id": 4
+    },
+    {
+      "productname": "tv",
+      "price": 20000,
+      "avail": "yes",
+      "id": 5
+    },
+    {
+      "productname": "smart-watch",
+      "price": 8000,
+      "avail": "no",
+      "id": 6
+    },
+    {
+      "productname": "washing-machine",
+      "price": 80000,
+      "avail": "no",
+      "id": 7
+    },
+    {
+      "productname": "smart-watch",
+      "price": 8000,
+      "avail": "no",
+      "id": 8
+    },
+    {
+      "productname": "tablet",
+      "price": 5000,
+      "avail": "no",
+      "id": 9
+    },
+    {
+      "productname": "tablet",
+      "price": 5000,
+      "avail": "yes",
+      "id": 10
+    },
+    {
+      "productname": "laptop",
+      "price": 10000,
+      "avail": "no",
+      "id": 11
+    },
+    {
+      "productname": "abhishek",
+      "price": 1e+44,
+      "avail": "yes",
+      "id": 12
+    },
+    {
+      "productname": "jjkl",
+      "price": 454,
+      "avail": "gfgf",
+      "id": 13
+    },
+    {
+      "productname": "dd",
+      "price": 2324,
+      "avail": "dssf",
+      "id": 14
+    },
+    {
+      "productname": "dd",
+      "price": 2324,
+      "avail": "dssf",
+      "id": 15
+    },
+    {
+      "productname": "dd",
+      "price": 2324,
+      "avail": "dssf",
+      "id": 16
+    },
+    {
+      "productname": "ddeee",
+      "price": 2324,
+      "avail": "dssf",
+      "id": 17
+    },
+    {
+      "productname": "ddeee",
+      "price": 2324,
+      "avail": "dssf",
+      "id": 18
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

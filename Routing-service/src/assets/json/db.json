@@ -65,6 +65,18 @@
       "price": 10000,
       "avail": "no",
       "id": 11
+    },
+    {
+      "productname": "abhishek",
+      "price": 1e+44,
+      "avail": "yes",
+      "id": 12
+    },
+    {
+      "productname": "jkjkj",
+      "price": 8686,
+      "avail": "jhkhk",
+      "id": 13
     }
   ]
 }

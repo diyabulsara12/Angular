@@ -1,5 +1,5 @@
 
-<button type="button" class="btn btn-primary my-5 mx-2" (click)="addProduct()">Add Product</button>
+<button type="button" class="btn btn-primary my-5 mx-2" >Add Product</button>
 <table class="table">
     <thead>
         <tr>
@@ -16,7 +16,7 @@
             <td>{{item.productname}}</td>
             <td>{{item.price}}</td>
             <td>{{item.avail}}</td>
-            <td><button type="button" class="btn btn-success mx-2" (click)="navigate(item.id)">Edit</button>
+            <td><button type="button" class="btn btn-success mx-2" >Edit</button>
                 <button type="button" class="btn btn-danger" (click)="deleteProduct(item.id)">Delete</button></td>
          </tr>  
      

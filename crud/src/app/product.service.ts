@@ -17,10 +17,10 @@ export class ProductService {
   deleteData(id:any){
     return this.http.delete(`http://localhost:3000/product/${id}`)
   }
-  getProduct(id:any){
-    return this.http.get(`http://localhost:3000/product/${id}`)
-  }
-  updateProduct(body:any,id:any){
-   return this.http.put(`http://localhost:3000/product/${id}`,body)
-  }
+  // getProduct(id:any){
+  //   return this.http.get(`http://localhost:3000/product/${id}`)
+  // }
+  // updateProduct(body:any,id:any){
+  //  return this.http.put(`http://localhost:3000/product/${id}`,body)
+  // }
   }
