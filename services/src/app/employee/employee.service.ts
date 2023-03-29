@@ -43,8 +43,5 @@ this.parsedata.splice(this.parsedata.indexOf(this.empid),1)
 localStorage.setItem("data",JSON.stringify(this.parsedata))
 this.localdata=localStorage.getItem("data")
 return JSON.parse(this.localdata)
-  
-
-  
   }
 }
