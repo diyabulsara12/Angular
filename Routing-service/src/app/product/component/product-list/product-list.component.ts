@@ -18,12 +18,12 @@ export class ProductListComponent implements OnInit {
   }
   addProduct(){
     this.router.navigate(["product-form",""])
-
   }
   deleteProduct(id:any){
     this.productService.deleteData(id).subscribe(Response =>Response)
     this.productService.getData().subscribe(Response => this.data=Response
-      )
+   )
+      
   }
   navigate(id:any){
     this.router.navigate(["product-form",id])

@@ -16,8 +16,15 @@
             <td>{{item.productname}}</td>
             <td>{{item.price}}</td>
             <td>{{item.avail}}</td>
-            <td><button type="button" class="btn btn-success mx-2" >Edit</button>
-                <button type="button" class="btn btn-danger" (click)="deleteProduct(item.id)">Delete</button></td>
+            <td>
+                <!-- <button type="button" class="btn btn-success mx-2" (click)="myEvent.emit({
+                id:item.id,productname:item.productname,price:item.price,avail:item.avail
+            })">Edit</button> -->
+            <i class="fa-solid fa-file-pen text-success" (click)="myEvent.emit({
+                id:item.id,productname:item.productname,price:item.price,avail:item.avail
+            })"></i>
+        
+            <i class="fa-solid fa-trash text-danger mx-2"  (click)="deleteProduct(item.id)"></i></td>
          </tr>  
      
     </tbody>

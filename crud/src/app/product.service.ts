@@ -20,7 +20,7 @@ export class ProductService {
   // getProduct(id:any){
   //   return this.http.get(`http://localhost:3000/product/${id}`)
   // }
-  // updateProduct(body:any,id:any){
-  //  return this.http.put(`http://localhost:3000/product/${id}`,body)
-  // }
+  updateProduct(id:any,body:any){
+   return this.http.put(`http://localhost:3000/product/${id}`,body)
+  }
   }

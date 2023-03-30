@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
@@ -9,9 +9,13 @@ import { ProductService } from '../product.service';
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css']
 })
-export class ProductFormComponent implements OnInit {
- myId!:any;
- myProduct:any;
+export class ProductFormComponent implements OnInit,OnChanges {
+  @Input () id:any
+  @Input () productname:any
+  @Input () price:any
+  @Input () avail:any
+  myId!:any;
+  myProduct:any;
   myReactiaveform!:FormGroup;
   buttonText="Submit"
   changeFunction=true
@@ -20,6 +24,20 @@ export class ProductFormComponent implements OnInit {
 
   constructor(private productService:ProductService,private router:Router,
     private route:ActivatedRoute) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.id !== undefined) {
+    
+      this.myReactiaveform.setValue({  
+     "productname" : this.productname,
+      "price" :  this.price,
+      "avail" :  this.avail})
+      this.buttonText="Update";
+    this.changeFunction=false 
+    }
+   
+  }
+  
+  
 
   ngOnInit(): void {
     this.myReactiaveform =new FormGroup({
@@ -27,34 +45,20 @@ export class ProductFormComponent implements OnInit {
       "price" : new FormControl(null,Validators.required),
       "avail" : new FormControl(null,Validators.required) 
     })
-  //  this.myId=this.route.snapshot.paramMap.get("id")
-  //  console.log(this.myId);
-   
-  //   if (this.myId !== "") {
-  //     this.productService.getProduct(this.myId).subscribe(Response => {
-  //       this.myProduct=Response;
-  //       console.log(this.myProduct);
-  //       this.myReactiaveform.setValue({   "productname" : this.myProduct.productname,
-  //       "price" :  this.myProduct.price,
-  //       "avail" :  this.myProduct.avail})
-        
-  //     })
-  //     this.buttonText="Update";
-  //     this.changeFunction=false
-  //   }
+  
+    
   }
   onSubmit(){
     this.productService.postData(this.myReactiaveform.value).subscribe(Response =>console.log("sucess") )
     console.log(this.myReactiaveform.value);
-    return this.http.get("http://localhost:3000/product")
+    this.http.get("http://localhost:3000/product")
     
    
   
   }
-  // onUpdate(){
-  //   this.productService.updateProduct(this.myReactiaveform.value,this.myId).subscribe(Response =>console.log("Data Updated") )
-  //   this.router.navigate(["product-list"])
-  // }
+  onUpdate(){
+    this.productService.updateProduct(this.id,this.myReactiaveform.value).subscribe(Response => Response )
+  }
   
 
 }

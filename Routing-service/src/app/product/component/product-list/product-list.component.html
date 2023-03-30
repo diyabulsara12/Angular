@@ -7,6 +7,8 @@
             <th>Price</th>
             <th>Availbility</th>
             <th>Action</th>
+            <th>Action</th>
+
         </tr>
     </thead>
     <tbody>
@@ -15,8 +17,9 @@
             <td>{{item.productname}}</td>
             <td>{{item.price}}</td>
             <td>{{item.avail}}</td>
-            <td><button type="button" class="btn btn-success mx-2" (click)="navigate(item.id)">Edit</button>
-                <button type="button" class="btn btn-danger" (click)="deleteProduct(item.id)">Delete</button></td>
+            <td><button class="sa sa-trust mx-2" (click)="navigate(item.id)">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button></td>
+                <i class="fa-solid fa-trash text-danger"  (click)="deleteProduct(item.id)"></i>
          </tr>  
      
     </tbody>

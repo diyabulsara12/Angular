@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductFormComponent,
-    ProductListComponent
+    ProductListComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

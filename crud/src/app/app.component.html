@@ -1,4 +1,6 @@
-<app-product-form></app-product-form>
-<app-product-list></app-product-list>
+{{id}}
+<app-product-form [id]="id" [productname]="productname" [price]="price" [avail]="avail
+"></app-product-form>
+<app-product-list (myEvent)="getProductlistdata($event)"></app-product-list>
 
 <router-outlet></router-outlet>

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud';
+  id:any;
+  productname:any;
+  price:any;
+  avail:any;
+  getProductlistdata(data:any){
+    this.id=data.id,
+    this.productname=data.productname
+    this.price=data.price
+    this.avail=data.avail
+    
+
+  }
 }

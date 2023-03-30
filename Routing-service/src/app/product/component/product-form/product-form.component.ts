@@ -9,8 +9,8 @@ import { ProductService } from '../../service/product.service';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
- myId!:any;
- myProduct:any;
+ myId!:string | null;
+ myProduct!:any;
   myReactiaveform!:FormGroup;
   buttonText="Submit"
   changeFunction=true

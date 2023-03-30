@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
 
@@ -9,6 +9,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  @Output () myEvent= new EventEmitter;
   data:any;
   constructor(private productService:ProductService,
     private router:Router) { }
