@@ -11,12 +11,29 @@ import { ProductService } from '../product.service';
 export class ProductListComponent implements OnInit {
   @Output () myEvent= new EventEmitter;
   data:any;
+  namesearch:string=""
+  totalLengh:any;
+  page:number=1;
+  
+
   constructor(private productService:ProductService,
     private router:Router) { }
 
   ngOnInit(): void {
-    this.productService.getData().subscribe(Response => this.data=Response
-    )
+   
+    this.productService.getData().subscribe(Response => {
+      this.totalLengh=Response;
+     
+      console.log("hello"+ this.totalLengh.length);
+      return this.data = Response;
+      
+      
+
+  
+  } 
+    
+   )
+   
   }
   // addProduct(){
   //   this.router.navigate(["product-form",""])

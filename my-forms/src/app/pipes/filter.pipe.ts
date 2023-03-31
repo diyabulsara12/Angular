@@ -6,10 +6,11 @@ import { filter } from 'rxjs';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value:any, searchterm:any){
+     transform(value:any, searchterm:any){
     return value.filter(function(search:any){
       return  search.name.toLowerCase().indexOf(searchterm.toLowerCase()) > -1 || search.email.toLowerCase().indexOf(searchterm.toLowerCase()) > -1 ||
-      search.phno.toString().toLowerCase().indexOf(searchterm.toLowerCase()) > -1 
+      search.phno.toString().toLowerCase().indexOf(searchterm.toLowerCase()) > -1  || search.id.toString().toLowerCase().indexOf(searchterm.toLowerCase()) > -1 
+
       
 
     })

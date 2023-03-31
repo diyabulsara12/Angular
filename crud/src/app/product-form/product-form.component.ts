@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 
@@ -22,17 +22,17 @@ export class ProductFormComponent implements OnInit,OnChanges {
   http: any;
   // data: Object;
 
-  constructor(private productService:ProductService,private router:Router,
-    private route:ActivatedRoute) { }
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.id !== undefined) {
+  constructor(private productService:ProductService,private router:Router,private route:ActivatedRoute) { }
+
+  ngOnChanges(){
+    if (this.id == "") {
     
       this.myReactiaveform.setValue({  
      "productname" : this.productname,
       "price" :  this.price,
       "avail" :  this.avail})
       this.buttonText="Update";
-    this.changeFunction=false 
+    
     }
    
   }
@@ -43,7 +43,12 @@ export class ProductFormComponent implements OnInit,OnChanges {
     this.myReactiaveform =new FormGroup({
       "productname" : new FormControl(null,Validators.required),
       "price" : new FormControl(null,Validators.required),
-      "avail" : new FormControl(null,Validators.required) 
+      "avail" : new FormControl(null,Validators.required) ,
+      "language": new FormControl(null,Validators.required),
+      // "ch1": new FormControl(null,Validators.required),
+      // "ch2": new FormControl(null,Validators.required),
+      // "ch3": new FormControl(null,Validators.required),
+      'quantity': new FormControl(null,Validators.required)
     })
   
     

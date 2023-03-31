@@ -1,21 +1,28 @@
-
-<button type="button" class="btn btn-primary my-5 mx-2" >Add Product</button>
-<table class="table">
+<label for="search">Search for empoloyee: </label>
+<input type="text"  id="search" placeholder="Search Here "
+[(ngModel)]="namesearch">
+<!-- <button type="button" class="btn btn-primary my-5 mx-2" >Add Product</button> -->
+<div class="table-wrapper">
+<table class="table ">
     <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Price</th>
             <th>Availbility</th>
+            <th>Language</th>
+            <th>quantity</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of data">
+        <tr *ngFor="let item of data | search:namesearch | paginate: { itemsPerPage: 10, currentPage:page}">
             <td>{{item.id}}</td>
             <td>{{item.productname}}</td>
             <td>{{item.price}}</td>
             <td>{{item.avail}}</td>
+            <td>{{item.language}}</td>
+            <td>{{item.quantity}}</td>
             <td>
                 <!-- <button type="button" class="btn btn-success mx-2" (click)="myEvent.emit({
                 id:item.id,productname:item.productname,price:item.price,avail:item.avail
@@ -25,7 +32,10 @@
             })"></i>
         
             <i class="fa-solid fa-trash text-danger mx-2"  (click)="deleteProduct(item.id)"></i></td>
-         </tr>  
+         </tr> 
+
      
     </tbody>
   </table>
+</div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>

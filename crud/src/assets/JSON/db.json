@@ -1,16 +1,109 @@
 {
   "product": [
     {
-      "productname": "fridge",
-      "price": 5656,
+      "productname": "laptop",
+      "price": 7868,
       "avail": "no",
-      "id": 4
+      "language": "CSS",
+      "quantity": 20,
+      "id": 18
     },
     {
-      "productname": "ytyty",
-      "price": 556,
-      "avail": "no",
-      "id": 5
+      "productname": "laptop",
+      "price": 535,
+      "avail": "yes",
+      "language": "HTML",
+      "quantity": 10,
+      "id": 19
+    },
+    {
+      "productname": "ad",
+      "price": 24,
+      "avail": "tdg",
+      "language": "JavaScript",
+      "quantity": 30,
+      "id": 20
+    },
+    {
+      "productname": "laptop",
+      "price": 54,
+      "avail": "566",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 21
+    },
+    {
+      "productname": "ggfg",
+      "price": 3553,
+      "avail": "fsg",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 22
+    }
+    ,
+    {
+      "productname": "laptop",
+      "price": 535,
+      "avail": "yes",
+      "language": "HTML",
+      "quantity": 10,
+      "id": 19
+    },
+    {
+      "productname": "ad",
+      "price": 24,
+      "avail": "tdg",
+      "language": "JavaScript",
+      "quantity": 30,
+      "id": 20
+    },
+    {
+      "productname": "laptop",
+      "price": 54,
+      "avail": "566",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 21
+    },
+    {
+      "productname": "ggfg",
+      "price": 3553,
+      "avail": "fsg",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 22
+    },
+    {
+      "productname": "laptop",
+      "price": 535,
+      "avail": "yes",
+      "language": "HTML",
+      "quantity": 10,
+      "id": 19
+    },
+    {
+      "productname": "ad",
+      "price": 24,
+      "avail": "tdg",
+      "language": "JavaScript",
+      "quantity": 30,
+      "id": 20
+    },
+    {
+      "productname": "laptop",
+      "price": 54,
+      "avail": "566",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 21
+    },
+    {
+      "productname": "ggfg",
+      "price": 3553,
+      "avail": "fsg",
+      "language": "CSS",
+      "quantity": "20",
+      "id": 22
     }
   ]
 }

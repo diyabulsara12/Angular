@@ -23,4 +23,4 @@ export class ProductService {
   updateProduct(id:any,body:any){
    return this.http.put(`http://localhost:3000/product/${id}`,body)
   }
-  }
+}
