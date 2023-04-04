@@ -1,0 +1,29 @@
+app-product-form{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 1;
+    background-color: red;
+    height: 100%;
+    width: 300px;
+    padding: 15px;
+}
+
+.opacity1{
+    opacity: 1;
+}
+.opacity05{
+opacity: 0.5;
+
+}
+
+    
+.toggle1{
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    right:-300px;
+
+}
+.toggle2{
+    transition: 0.5s ease-in-out;
+}

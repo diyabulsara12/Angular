@@ -1,6 +1,6 @@
-{{id}}
-<app-product-form [id]="id" [productname]="productname" [price]="price" [avail]="avail
-"></app-product-form>
-<app-product-list (myEvent)="getProductlistdata($event)"></app-product-list>
 
+<app-product-form [id]="id" [productname]="productname" [price]="price" [avail]="avail"   [language]="language" [quantity]="quantity"
+ [ngClass]="show?'toggle1':'toggle2'"  (myEvent2)="getToggle($event)"></app-product-form>
+<app-product-list [ngClass]="show?'opacity1':'opacity05'" (myEvent)="getProductlistdata($event)"></app-product-list>
+<button (click)="toggle()">Add Product</button>
 <router-outlet></router-outlet>

@@ -11,7 +11,7 @@ export class MapComponent implements OnInit {
  userUnsubscirbe!:Subscription;
  userUnsubscirbe2!:Subscription;
  public data=[{id:1,name:"diya"},{id:1,name:"nupur"},{id:1,name:"mahi"},{id:1,name:"sweta"},{id:1,name:"yashvi"}]
-public users =from(this.data)
+ public users =from(this.data)
   constructor( private utilityService:UtilityServiceService) { }
 
   ngOnInit(): void {

@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
   namesearch:string=""
   totalLengh:any;
   page:number=1;
+  toggle:boolean=true;
   
 
   constructor(private productService:ProductService,

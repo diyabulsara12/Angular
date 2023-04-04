@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
@@ -14,6 +14,13 @@ export class ProductFormComponent implements OnInit,OnChanges {
   @Input () productname:any
   @Input () price:any
   @Input () avail:any
+  @Input () language:any
+  @Input () quantity:any
+
+
+
+  formToggle:boolean=true;
+  @Output () myEvent2= new EventEmitter;
   myId!:any;
   myProduct:any;
   myReactiaveform!:FormGroup;
@@ -25,14 +32,17 @@ export class ProductFormComponent implements OnInit,OnChanges {
   constructor(private productService:ProductService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnChanges(){
-    if (this.id == "") {
+    if (this.id !==undefined) {
     
       this.myReactiaveform.setValue({  
      "productname" : this.productname,
       "price" :  this.price,
-      "avail" :  this.avail})
+      "avail" :  this.avail,
+       "language": this.language,
+      "quantity":this.quantity
+    })
       this.buttonText="Update";
-    
+      this.changeFunction=false
     }
    
   }
@@ -45,9 +55,6 @@ export class ProductFormComponent implements OnInit,OnChanges {
       "price" : new FormControl(null,Validators.required),
       "avail" : new FormControl(null,Validators.required) ,
       "language": new FormControl(null,Validators.required),
-      // "ch1": new FormControl(null,Validators.required),
-      // "ch2": new FormControl(null,Validators.required),
-      // "ch3": new FormControl(null,Validators.required),
       'quantity': new FormControl(null,Validators.required)
     })
   
@@ -56,7 +63,8 @@ export class ProductFormComponent implements OnInit,OnChanges {
   onSubmit(){
     this.productService.postData(this.myReactiaveform.value).subscribe(Response =>console.log("sucess") )
     console.log(this.myReactiaveform.value);
-    this.http.get("http://localhost:3000/product")
+    // this.http.get("http://localhost:3000/product")
+    this.myEvent2.emit(this.formToggle)
     
    
   
