@@ -1,0 +1,32 @@
+{
+  "customer": [
+    {
+      "customername": "diya",
+      "description": "jadajdhd",
+      "status": "Error",
+      "rate": 575757,
+      "id": 4
+    },
+    {
+      "customername": "ssfsf",
+      "description": "rfsdfdf",
+      "status": "Error",
+      "rate": 342424,
+      "id": 5
+    },
+    {
+      "customername": "jhjh",
+      "description": "gjgj",
+      "status": "Success",
+      "rate": 557,
+      "id": 6
+    },
+    {
+      "customername": "nupur",
+      "description": "r334",
+      "status": "Open",
+      "rate": 42,
+      "id": 7
+    }
+  ]
+}

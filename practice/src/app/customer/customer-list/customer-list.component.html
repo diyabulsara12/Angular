@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary mb-3 mt-3" (click)="toggleForm()">+ Add Customer </button>
+<table class="table">
+    <thead class="thead-dark">
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Satus</th>
+        <th scope="col">Rate</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of getCustomer">
+        <td>{{item.id}}</td>
+        <td>{{item.customername}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.status}}</td>
+        <td>{{item.rate}}</td>
+        <td>
+            <button class="btn btn-info mr-2" (click)="toggleFormwithid(item.id)">Edit</button>
+   
+        <button class="btn btn-info" (click)="deleteCustomerdata(item.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
