@@ -5,30 +5,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './customer-list.component.html',
   styleUrls: ['./customer-list.component.css']
 })
-export class CustomerListComponent {
-  public isToggle:boolean=true;
-  
+export class CustomerListComponent  {
+  public isToggle=true;
+ namesearch:string=""
+  @Output() showform=new EventEmitter();
   @Input () getCustomer:any;
-
-  @Output() formEvent=new EventEmitter()
   @Output() editEvent=new EventEmitter()
   @Output() deleteCustomer=new EventEmitter()
-  customerForm: any;
-  
+
+  customerService: any;
   toggleForm(){
-    this.formEvent.emit(this.isToggle)
+    this.showform.emit(this.isToggle);
   }
- 
   deleteCustomerdata(id:any){
     this.deleteCustomer.emit(id);
   }
-  toggleFormwithid(id:any){
-    this.formEvent.emit(this.isToggle)
+  togglecustomerwithid(id:any){
+    this.showform.emit(this.isToggle)
     this.editEvent.emit(id)
-   
-   
-    
   }
  
-
 }

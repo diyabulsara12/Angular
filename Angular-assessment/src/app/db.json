@@ -1,0 +1,140 @@
+{
+  "customer": [
+    {
+      "customername": "diya",
+      "description": "jadajdhd",
+      "status": "Error",
+      "rate": 575757,
+      "balance": 3000,
+      "id": 1
+    },
+    {
+      "customername": "ewr",
+      "description": "24w",
+      "status": "Success",
+      "rate": 4242,
+      "balance": 422424,
+      "id": 3
+    },
+    {
+      "customername": "adadada",
+      "description": "24w",
+      "status": "Inactive",
+      "rate": 4242,
+      "balance": 422424,
+      "id": 4
+    },
+    {
+      "customername": "diya",
+      "description": "24w",
+      "status": "Success",
+      "rate": 4242,
+      "balance": 422424,
+      "id": 5
+    },
+    {
+      "customername": "diya",
+      "description": "24w",
+      "status": "Inactive",
+      "rate": 4242,
+      "balance": 422424,
+      "id": 6
+    },
+    {
+      "customername": "wwr",
+      "description": "r",
+      "status": "Open",
+      "rate": 897,
+      "balance": 97799,
+      "id": 7
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 8
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 9
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 10
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 11
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 12
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 13
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 14
+    },
+    {
+      "customername": "ututuwrw",
+      "description": "tututwrwsrwr",
+      "status": "Success",
+      "rate": 64664,
+      "balance": 6464646,
+      "id": 15
+    },
+    {
+      "customername": "eqeq",
+      "description": "qeee",
+      "status": "Success",
+      "rate": 332,
+      "balance": 2414,
+      "id": 16
+    },
+    {
+      "customername": "eqeq",
+      "description": "qeee",
+      "status": "Success",
+      "rate": 332,
+      "balance": 2414,
+      "id": 17
+    },
+    {
+      "customername": "eqeq",
+      "description": "qeee",
+      "status": "Success",
+      "rate": 332,
+      "balance": 2414,
+      "id": 18
+    }
+  ]
+}

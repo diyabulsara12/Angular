@@ -1,0 +1,73 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+   
+    padding: 20px 50px 20px 10px;
+  }
+  #customers  tr{
+    padding-left: 20px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #EBF0FA;}
+  
+  
+  
+  #customers th {
+    align-items: center;
+     padding: 20px 50px 20px 10px;
+    text-align: left;
+    background-color:#EBF0FA;
+    color:#464F60;
+    font-weight: 600;
+     font-size: 16px;
+  }
+  
+.name{
+    font-weight: 600;
+font-size: 14px;
+color: #171C26;
+  }
+  .description{
+    font-weight: 400;
+font-size: 14px;
+  }
+  .status{
+    color:#4F5AED;
+    font-weight: 500;
+  }
+  .rate{
+    font-size: 14px;
+    color: #464F60;
+    font-weight: 400;
+  }
+  .balance{
+    color: #D12953;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .filter-button{
+    background: #FFFFFF;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(70, 79, 96, 0.16), 0px 2px 5px rgba(89, 96, 120, 0.1);
+border-radius: 6px;
+padding: 3px 5px 5px 3px;
+border: none;
+
+  }
+  app-customer-list{
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  .table-wrapper{
+    height: 100%;
+    overflow: auto;
+  }
+
+
+
+
+

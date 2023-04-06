@@ -1,0 +1,55 @@
+
+
+    <div>
+<div class="form-caption">
+
+
+    ADD CUSTOMER
+</div>
+<form class="text-bg-light" [formGroup]="customerForm" (ngSubmit)=" condition ?addCustomerdata() : updateCustomerdata()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Name" formControlName="customername">
+      <div class="validatemessage" *ngIf="!customerForm.get('description')?.errors?.['minlenght'] && customerForm.get('description')?.touched">
+
+        lenght should be minimum 3 and 25
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Description" formControlName="description">
+      <div class="validatemessage" *ngIf="!customerForm.get('description')?.errors?.['minlenght'] && customerForm.get('description')?.touched">
+
+        lenght should be minimum 3 and 150
+      </div>
+    </div>
+   
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Status</label>
+        <ng-select [items]="status" bindLabel="name" bindValue="name" formControlName="status">
+        </ng-select>
+       
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Rate</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Rate" formControlName="rate">
+        <div class="validatemessage" *ngIf="!customerForm.get('rate')?.errors?.['pattern'] && customerForm.get('rate')?.touched">
+
+           Digits Only
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Balance</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Balance" formControlName="balance">
+        <div class="validatemessage" *ngIf="!customerForm.get('balance')?.errors?.['pattern'] && customerForm.get('balance')?.touched">
+            Digits Only
+          </div>
+      </div>
+      
+<div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary mr-2" [disabled]="!customerForm.valid">{{changeBtn}}</button>
+    <button type="button" class="btn btn-primary"  (click)="closeForm()">Cancel</button>
+</div>
+  </form>
+</div>

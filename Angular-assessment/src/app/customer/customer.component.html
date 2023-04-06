@@ -1,0 +1,4 @@
+
+<app-customer-form  *ngIf="isToggle" (hideForm)="cancelForm($event)" [editcustomer]="editcustomer"  (addData)="addCustomerdata($event)" (updateData)="updateCustomerdata($event)"></app-customer-form>
+<app-customer-list [ngStyle]="show?{'opacity':1}:{'opacity':05}" (showform)="toggleForm($event)" [getCustomer]="getCustomer" (deleteCustomer)="deleteCustomerdata($event)" (editEvent)="getCustomerbyIdData($event)"></app-customer-list>
+

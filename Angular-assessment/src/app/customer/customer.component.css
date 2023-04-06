@@ -1,0 +1,20 @@
+app-customer-form{
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 1;
+    background-color: #E7E7E7;
+    height: 100%;
+    width: 300px;
+    padding: 15px;
+}
+.opacity1{
+    opacity: 1;
+}
+.opacity05{
+opacity: 0.5;
+
+}
+app-customer-form{
+    background-color: white;
+}

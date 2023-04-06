@@ -26,6 +26,8 @@ export class CustomerFormComponent implements OnInit,OnChanges {
       "description" : this.editdata.description,
       "status" :this.editdata.status ,
       "rate": this.editdata.rate,
+      "balance": this.editdata.balance
+
 
     })
     this.changeBtn="Update"
