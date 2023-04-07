@@ -63,8 +63,10 @@ border: none;
     flex-grow: 1;
   }
   .table-wrapper{
+    
     height: 100%;
     overflow: auto;
+    flex-grow: 1;
   }
 
 
